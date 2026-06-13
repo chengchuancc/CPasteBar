@@ -75,12 +75,12 @@ select {
 .hero {
   display: flex;
   flex-direction: column;
-  gap: 42px;
+  gap: 34px;
   align-items: center;
   max-width: 1160px;
   min-height: 0;
   margin: 0 auto;
-  padding: 54px 24px 42px;
+  padding: 48px 24px 34px;
 }
 
 .hero-copy {
@@ -147,7 +147,7 @@ h1 {
 }
 
 .product-shot {
-  width: 100%;
+  width: min(100%, 820px);
   display: flex;
   justify-content: center;
   position: relative;
@@ -164,11 +164,11 @@ h1 {
 
 .hero-visual {
   position: relative;
-  width: min(100%, 980px);
-  height: auto;
-  object-fit: contain;
+  width: min(100%, 760px);
+  height: min(50vw, 420px);
+  object-fit: cover;
   object-position: center;
-  border-radius: 30px;
+  border-radius: 26px;
   box-shadow: 0 34px 90px rgba(15, 23, 42, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.72);
 }
@@ -194,8 +194,9 @@ figure {
 figure img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 220px;
   object-fit: cover;
+  object-position: center;
 }
 
 figcaption {
@@ -237,8 +238,9 @@ article {
 article img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  height: 180px;
   object-fit: cover;
+  object-position: center;
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
@@ -294,6 +296,15 @@ footer {
 
   h1 {
     font-size: 44px;
+  }
+
+  .hero-visual {
+    height: 300px;
+  }
+
+  figure img,
+  article img {
+    height: 210px;
   }
 
   .grid {
