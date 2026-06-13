@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CPasteBar - Clipboard history for macOS</title>
+  <meta name="description" content="CPasteBar is a fast, multilingual clipboard history app for macOS.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <img src="assets/app-icon.png" alt="CPasteBar icon">
+      <span>CPasteBar</span>
+    </a>
+    <nav>
+      <a data-i18n="navFeatures" href="#features">Features</a>
+      <a data-i18n="navDownload" href="#download">Download</a>
+      <a data-i18n="navOpenSource" href="#opensource">Open Source</a>
+      <select id="language" aria-label="Language">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="de">Deutsch</option>
+        <option value="ja">日本語</option>
+        <option value="fr">Français</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="eyebrow">Clipboard history for macOS</p>
+        <h1 data-i18n="headline">Paste anything you copied, exactly when you need it.</h1>
+        <p class="subhead" data-i18n="subhead">CPasteBar brings a Win+V-style clipboard picker to macOS with quick search-free access, multilingual UI, and a clean menu bar experience.</p>
+        <div class="actions">
+          <a class="primary" data-i18n="download" href="downloads/CPasteBar.dmg">Download for macOS</a>
+          <a class="secondary" data-i18n="github" href="https://github.com/">View on GitHub</a>
+        </div>
+      </div>
+      <div class="product-shot" aria-label="CPasteBar interface preview">
+        <div class="panel">
+          <div class="panel-head">
+            <strong>CPasteBar</strong>
+            <span>Option-V</span>
+            <button>×</button>
+          </div>
+          <div class="item"><span>pkill -x CPasteBar && open...</span><b>⧉</b><b>⇩</b><b>⌫</b></div>
+          <div class="item"><span>Package the app as a DMG...</span><b>⧉</b><b>⇩</b><b>⌫</b></div>
+          <div class="item"><span>cpastebar.com</span><b>⧉</b><b>⇩</b><b>⌫</b></div>
+          <div class="item"><span>Clipboard notes</span><b>⧉</b><b>⇩</b><b>⌫</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2 data-i18n="featuresTitle">Built for everyday copying</h2>
+      <div class="grid">
+        <article>
+          <h3 data-i18n="featurePickerTitle">Win+V-style picker</h3>
+          <p data-i18n="featurePickerBody">Open a compact clipboard panel near your cursor and scroll through saved snippets.</p>
+        </article>
+        <article>
+          <h3 data-i18n="featureActionsTitle">Explicit actions</h3>
+          <p data-i18n="featureActionsBody">Copy, paste, or delete individual history items with clear per-row controls.</p>
+        </article>
+        <article>
+          <h3 data-i18n="featureLanguageTitle">Multilingual by design</h3>
+          <p data-i18n="featureLanguageBody">Use CPasteBar in English, Chinese, German, Japanese, or French.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="download" class="download-band">
+      <h2 data-i18n="downloadTitle">Ready to install?</h2>
+      <p data-i18n="downloadBody">Download the DMG, drag CPasteBar into Applications, then grant Accessibility permission for paste automation.</p>
+      <a class="primary" data-i18n="download" href="downloads/CPasteBar.dmg">Download for macOS</a>
+    </section>
+
+    <section id="opensource" class="section compact">
+      <h2 data-i18n="openSourceTitle">Open source</h2>
+      <p data-i18n="openSourceBody">CPasteBar is released under the MIT License so the community can inspect, improve, and share it.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Copyright © 2026 chengchuan</span>
+    <span>CPasteBar</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
