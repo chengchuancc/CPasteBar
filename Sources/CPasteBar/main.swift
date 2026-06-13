@@ -583,7 +583,7 @@ private final class HistoryRowView: NSView {
 
     private func iconButton(symbol: String, label: String, action: Selector) -> NSButton {
         let button = NSButton(image: NSImage(systemSymbolName: symbol, accessibilityDescription: label) ?? NSImage(), target: self, action: action)
-        button.bezelStyle = .inline
+        button.bezelStyle = .regularSquare
         button.isBordered = false
         button.contentTintColor = .secondaryLabelColor
         button.toolTip = label
@@ -1069,6 +1069,7 @@ private final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate
                         self?.pasteText(text)
                     },
                     onDelete: { [weak self] text in
+                        self?.statusItem.menu?.cancelTracking()
                         self?.deleteText(text)
                     }
                 )
@@ -1225,7 +1226,7 @@ private final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate
 
         popupCloseMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown]) { [weak self, weak panel] event in
             guard let self, let panel else { return }
-            let clickPoint = event.locationInWindow
+            let clickPoint = NSEvent.mouseLocation
             Task { @MainActor in
                 if !panel.frame.contains(clickPoint) {
                     self.closePopup()
